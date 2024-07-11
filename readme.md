@@ -69,3 +69,4 @@ Una vez añadidos los datos, se abre la terminal y debemos dirigirnos a la carpe
 _python xml2tps.py_
 
 El cual va a ejecutar la función además de realizar la conversión del archivo _xml_ a un archivo _tps_.
+
