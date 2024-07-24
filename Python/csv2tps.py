@@ -1,4 +1,4 @@
-def csv2tps(csvfile, tpsfile, mlmformat = True, fname = ''):
+def csv2tps(csvfile, tpsfile, mlmformat = True, fname = '', top = 0):
     import pandas as pd 
     archivo = pd.read_csv(f"{csvfile}") 
     if mlmformat == True:
@@ -14,7 +14,7 @@ def csv2tps(csvfile, tpsfile, mlmformat = True, fname = ''):
     for i in matrix:
         nombres.append(i[0])
     for i in range(len(valoresX)):
-        lista_tuplas = list(zip(valoresX[i], valoresY[i]))
+        lista_tuplas = list(zip(valoresX[i],(abs(top - valoresY[i]))))
         coordenadas.append(lista_tuplas)
     data = {'id': nombres, 'landmarks': coordenadas}
 
@@ -36,4 +36,3 @@ def csv2tps(csvfile, tpsfile, mlmformat = True, fname = ''):
             file.write(f"IMAGE={id}\n")
             file.write(f"ID={contador}\n")
             contador += 1
-            

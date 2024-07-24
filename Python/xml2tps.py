@@ -1,4 +1,4 @@
-def xml2tps(xmlfile, tpsfile, fname = '', LM = 0):   
+def xml2tps(xmlfile, tpsfile, fname = '', LM = 0, top = 0):   
     import os
     import pandas as pd 
     import xml.etree.ElementTree as ET
@@ -26,7 +26,7 @@ def xml2tps(xmlfile, tpsfile, fname = '', LM = 0):
             coordinates = []
             for part in parts:
                 x = part.get('x')
-                y = part.get('y')
+                y = abs(top - int(part.get('y')))
                 coordinates.extend([x, y])
 
             row = [file_id] + coordinates
@@ -69,4 +69,3 @@ def xml2tps(xmlfile, tpsfile, fname = '', LM = 0):
             contador += 1
 
     os.remove("output.csv")
-    
