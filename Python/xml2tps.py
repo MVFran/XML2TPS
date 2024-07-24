@@ -1,9 +1,28 @@
-def xml2tps(xmlfile, tpsfile, fname = '', LM = 0, top = 0):   
+def xml2tps(xmlfile, tpsfile, images, fname = '', LM = 0):   
     import os
     import pandas as pd 
     import xml.etree.ElementTree as ET
     import csv
     
+    '''''
+    En esta parte es donde se van a leer los tamaños de las imagenes (en pixeles)
+    '''''
+    from PIL import Image
+
+    image_sizes = {}
+    valid_extensions = ('.jpg', '.jpeg', '.png', '.bmp', '.gif', '.tiff')  # Image's extensions
+
+    for filename in os.listdir(images):
+        if filename.lower().endswith(valid_extensions):
+            image_path = os.path.join(images, filename)
+            with Image.open(image_path) as img:
+                image_sizes[filename] = img.size  
+    
+    alturas = []
+    for size in image_sizes.items():
+        alturas.append(size[1][1])
+    
+    #############
     tree = ET.parse(xmlfile)
     root = tree.getroot()
 
@@ -26,7 +45,7 @@ def xml2tps(xmlfile, tpsfile, fname = '', LM = 0, top = 0):
             coordinates = []
             for part in parts:
                 x = part.get('x')
-                y = abs(top - int(part.get('y')))
+                y = part.get('y')
                 coordinates.extend([x, y])
 
             row = [file_id] + coordinates
@@ -45,7 +64,7 @@ def xml2tps(xmlfile, tpsfile, fname = '', LM = 0, top = 0):
     for i in matrix:
         nombres.append(i[0])
     for i in range(len(valoresX)):
-        lista_tuplas = list(zip(valoresX[i], valoresY[i]))
+        lista_tuplas = list(zip(valoresX[i], abs(alturas[i] - valoresY[i])))
         coordenadas.append(lista_tuplas)
     data = {'id': nombres, 'landmarks': coordenadas}
 
