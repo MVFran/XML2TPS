@@ -20,7 +20,6 @@ xml2tps <- function(xmlfile, tpsfile, fname = "", LM = 0, top = 0) {
   img_id_counter <- 0
   
   for (image in images) {
-    # Obtener el nombre del archivo y eliminar el fragmento innecesario
     img_file <- xmlGetAttr(image, "file")
     img_file <- str_replace(img_file, fname, "")
     
