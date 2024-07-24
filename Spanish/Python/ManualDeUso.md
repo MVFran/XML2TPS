@@ -16,7 +16,7 @@ son modulos estandar de la biblioteca de python, por lo que vienen instaladas po
 
 ## Uso
 
-Para usarlo de forma sencilla, se descarga el archivo `xml2tps.py` en la misma ruta donde se encuentre el archivo `xml` que se desea transformar.
+Para usarlo de forma sencilla, se descarga el archivo [`xml2tps.py`](/Spanish/Python/xml2tps.py) en la misma ruta donde se encuentre el archivo `xml` que se desea transformar.
 
 ![Imagen01](/images/Imagen01.jpeg)
 

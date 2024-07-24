@@ -13,7 +13,7 @@ are standard packages of Python and come pre-instaled. <br><br>
 
 ## Use
 
-To use it easily, download the `xml2tps.py` file to the same directory as the `xml` file you want to transform.
+To use it easily, download the [`xml2tps.py`](/Python/xml2tps.py) file to the same directory as the `xml` file you want to transform.
 
 ![Imagen01](/images/Imagen01.jpeg)
 
