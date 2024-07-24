@@ -16,7 +16,7 @@ def xml2tps(xmlfile, tpsfile, images, fname = '', LM = 0):
         if filename.lower().endswith(valid_extensions):
             image_path = os.path.join(images, filename)
             with Image.open(image_path) as img:
-                image_sizes[filename] = img.size  # (width, height)
+                image_sizes[filename] = img.size  
     
     alturas = []
     for size in image_sizes.items():
