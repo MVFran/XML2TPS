@@ -3,6 +3,7 @@
 ## Python dependencies 
 We need to have the library :
 - pandas >= 2.0.3
+- pillow >= 10.0.1
 
 The packages:
 - os

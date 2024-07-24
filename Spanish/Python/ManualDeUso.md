@@ -4,6 +4,7 @@
 
 Debemos tener previamente instalada la libreria:
 - pandas >= 2.0.3
+- pillow >= 10.0.1
 
 Además, las librerias:
 - os
