@@ -1,3 +1,9 @@
+if (!requireNamespace("magick", quietly = TRUE)) install.packages("magick")
+if (!requireNamespace("dplyr", quietly = TRUE)) install.packages("dplyr")
+if (!requireNamespace("XML", quietly = TRUE)) install.packages("XML")
+if (!requireNamespace("stringr", quietly = TRUE)) install.packages("stringr")
+if (!requireNamespace("data.table", quietly = TRUE)) install.packages("data.table")
+
 xml2tps <- function(xmlfile, tpsfile, fname = "", LM = 0, image_directory = "") {
   library(magick)
   library(dplyr)
