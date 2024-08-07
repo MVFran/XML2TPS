@@ -10,9 +10,7 @@ def csv2tps(csvfile, tpsfile, images, mlmformat = True, fname = ''):
     coordenadas = []
     valoresX = matrix[:, 1::2]
     valoresY = matrix[:, 2::2]
-    '''
-    Esta parte va a leer los tamaños de las imagenes
-    '''
+ 
     from PIL import Image
     import os
     image_sizes = {}
@@ -28,8 +26,6 @@ def csv2tps(csvfile, tpsfile, images, mlmformat = True, fname = ''):
     for size in image_sizes.items():
         alturas.append(size[1][1])
 
-    ##########
-    
     for i in matrix:
         nombres.append(i[0])
     for i in range(len(valoresX)):

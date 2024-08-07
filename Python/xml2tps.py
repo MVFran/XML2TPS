@@ -3,10 +3,6 @@ def xml2tps(xmlfile, tpsfile, images, fname = '', LM = 0):
     import pandas as pd 
     import xml.etree.ElementTree as ET
     import csv
-    
-    '''''
-    En esta parte es donde se van a leer los tamaños de las imagenes (en pixeles)
-    '''''
     from PIL import Image
 
     image_sizes = {}
@@ -22,7 +18,6 @@ def xml2tps(xmlfile, tpsfile, images, fname = '', LM = 0):
     for size in image_sizes.items():
         alturas.append(size[1][1])
     
-    #############
     tree = ET.parse(xmlfile)
     root = tree.getroot()
 
