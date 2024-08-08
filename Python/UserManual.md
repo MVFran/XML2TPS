@@ -15,17 +15,17 @@ are standard packages of Python and come pre-instaled. <br><br>
 
 To use it easily, download the [`xml2tps.py`](/Python/xml2tps.py) file to the same directory as the `xml` file you want to transform.
 
-![Imagen01](/images/Imagen01.jpeg)
+![imagen01](/images/imagen01.jpeg)
 
 Once downloaded, you can open it with Notepad or any IDE.
 
-![Imagen02](/images/Imagen02.jpeg)
+![imagen02](/images/imagen02.jpeg)
 
 Go to the last line and write the function:
 
-    xml2tps(xmlfile, tpsfile, fname = '', LM = 0, top = 0) 
+    xml2tps(xmlfile, tpsfile, images, fname = '', LM = 0)
 
-![Imagen03](/images/Imagen03.jpeg)
+![imagen03](/images/imagen03.jpeg)
 
 Now, it is necessary to modify the arguments.  <br><br>
 
@@ -35,40 +35,43 @@ Now, it is necessary to modify the arguments.  <br><br>
 
 `tpsfile` here you add the desired name for the TPS file (also enclosed in quotes along with the `.tps` extension), for example, if you want to save it as `resultado.tps`.
 
+`images` here you should place the name of the folder where the images we need for our study are stored. This argument is necessary because the [Ml-Morph](https://github.com/agporto/ml-morph) program modifies the values on the _Y_ axis, so it is necessary to readjust these values to properly position the landmarks.
+
 `fname = ''` If the _xml_ file data includes the folder name where the images are located, you should add the folder name in quotes so that the _tps_ file can recognize the images. In our example, we can see that the folder name _**"train\\"**_ precedes the original image name.
 
-![Imagen04](/images/Imagen04.jpeg)
+![imagen04](/images/imagen04.jpeg)
 
 `LM` Here you enter the number of landmarks contained in the file (counting only one axis). For example: You only enter the number of landmarks on the _X_ axis. In our example, we have **12** landmarks.
 
-`top` This argument is because the [Ml-Morph](https://github.com/agporto/ml-morph) program modifies values on the _Y_ axis, so it's necessary to adjust these values accordingly. top takes as its argument the height (in pixels) of the images. You can check the height property of any image; in our case, it is **2000** pixels.
-
-![Imagen05](/images/Imagen05.jpeg)
-
 So, after adding the function, you have:
 
-    xml2tps("prueba.xml", "resultado.tps", fname = "train\\", LM = 12, top = 2000)
+    xml2tps("prueba.xml", "resultado.tps", "imagenes", fname = 'train\\', LM = 12)
 
-![Imagen06](/images/Imagen06.jpeg)
+![imagen05](/images/imagen05.jpeg)
 
 Finally, save the changes to the document.
+
+And if we are in an IDLE, we can run it directly from the interpreter being used.
+
+> **Note**
+> In the fname argument, two backslashes were used where the files only contained a single backslash. This is because Python recognizes the backslash as an escape character, so if only one is used, the program will encounter an error. Therefore, if your folders contain a backslash, you must use another one for Python to work correctly.
 
 <br><br>
 
 ## Execution from the terminal
 
-Once you've added and saved the data, open the terminal. On Windows, you can do this by pressing `Windows + R`, which opens a window. Type `cmd` and click `OK` to open the Command Prompt.
+Once the data has been added and saved, open a terminal to run the program. To do this, navigate to the folder where the `xml2tps` program was previously downloaded.
 
-![Imagen07](/images/Imagen07.jpeg)
+![imagen06](/images/imagen06.jpeg)
 
-Here, you need to navigate to the folder where the program you edited earlier is saved, to execute the following command:
+Here, the following command should be executed:
 
     python xml2tps.py
 
-![Imagen08](/images/Imagen08.jpeg)
+![imagen07](/images/imagen07.jpeg)
 
-which will execute the function and convert the `xml` file we placed to a `tps` file.
+Which will execute the function and convert the `xml` file we placed to a `tps` file.
 
 Finally, you can see that the `resultado.tps` file has been created successfully.
 
-![Imagen9](/images/Imagen9.jpeg)
+![imagen08](/images/imagen08.jpeg)

@@ -41,7 +41,7 @@ Ahora, es necesario modificar los argumentos.
 
 `images` aquí debe colocarse el nombre de la carpeta en la que esten almacenadas las imagenes que necesitamos para nuestro estudio, este argumento se necesita pues el programa [Ml-Morph](https://github.com/agporto/ml-morph) modifica los valores en el eje _Y_, entonces es necesario ajustar nuevamente esos valores para que se coloquen de manera adecuada los landmarks.
 
-`fname = ''` Si sucede que, los datos del archivo _xml_ en donde se encuentran las imagenes contienen el nombre de la carpeta en la que se encuentran, debe de añadirse entre comillas el nombre de la carpeta para que el archivo _tps_ pueda reconocer las imagenes, en nuestro ejemplo podemos ver que se encuentra el nombre _**"train\\"**_ antes de el nombre original de la imagen.
+`fname = ''` Si sucede que, los datos del archivo _xml_ en donde se encuentran las imagenes contienen el nombre de la carpeta en la que se encuentran, debe de añadirse entre comillas el nombre de la carpeta para que el archivo _tps_ pueda reconocer las imagenes, en nuestro ejemplo podemos ver que se encuentra el nombre _**"train\\"**_ antes del nombre original de la imagen.
 
 ![imagen04](/images/imagen04.jpeg)
 
@@ -56,6 +56,9 @@ Por lo que, tras agregar la función, se tiene:
 Finalmente, guardamos los cambios en el documento.
  
 Y si estamos en un IDLE, podemos ejecutarlo de una vez desde el interprete que se este usando.
+
+> **Nota**
+> En el argumento **fname** se colocaron dos barras invertidas cuando los archivos solo contenian una unica barra, esto es porque python reconoce la barra invertida como un simbolo de escape, por lo que si se coloca unicamente uno el programa va a tener un error, es por eso que si tus carpetas contienen una barra invertida se debe colocar otra para que python funcione correctamente.
 
 <br><br>
 
