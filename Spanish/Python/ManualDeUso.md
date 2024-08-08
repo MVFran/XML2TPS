@@ -26,7 +26,7 @@ Una vez descargado, podemos abrirlo con el block de notas o con algún IDE:
 
 Vamos a la ultima linea y escribimos la función: 
 
-    xml2tps(xmlfile, tpsfile, fname = '', LM = 0, top = 0) 
+    xml2tps(xmlfile, tpsfile, images, fname = '', LM = 0)
 
 ![Imagen03](/images/Imagen03.jpeg)
     
@@ -39,40 +39,40 @@ Ahora, es necesario modificar los argumentos.
 
 `tpsfile` aquí se añade el nombre con el que se desea guardar el archivo _tps_ (de igual forma debe añadirse entre comillas justo a la extensión _.tps_), por ejemplo, queremos que se guarde como `resultado.tps`.
 
+`images` aquí debe colocarse el nombre de la carpeta en la que esten almacenadas las imagenes que necesitamos para nuestro estudio, este argumento se necesita pues el programa [Ml-Morph](https://github.com/agporto/ml-morph) modifica los valores en el eje _Y_, entonces es necesario ajustar nuevamente esos valores para que se coloquen de manera adecuada los landmarks.
+
 `fname = ''` Si sucede que, los datos del archivo _xml_ en donde se encuentran las imagenes contienen el nombre de la carpeta en la que se encuentran, debe de añadirse entre comillas el nombre de la carpeta para que el archivo _tps_ pueda reconocer las imagenes, en nuestro ejemplo podemos ver que se encuentra el nombre _**"train\\"**_ antes de el nombre original de la imagen.
 
 ![Imagen04](/images/Imagen04.jpeg)
 
 `LM` Aquí se colocan la cantidad de landmarks que contiene el archivo (contando unicamente un eje), por ejemplo: Solo se coloca la cantidad de landmarks que hay en el eje _X_, en nuestro ejemplo tenemos **12** landmarks. 
 
-`top` Este argumento es porque el programa [Ml-Morph](https://github.com/agporto/ml-morph) modifica los valores en el eje _Y_, por lo que, es necesario acomodar dichos valores, para esto, top recibe como argumento la altura (en pixeles) de las imagenes, por lo que debemos acceder a las propiedades de cualquier imagen y ver el alto, en nuestro caso es de **2000**.
+Por lo que, tras agregar la función, se tiene:
+
+    xml2tps("prueba.xml", "resultado.tps", "imagenes", fname = 'train\\', LM = 12)
 
 ![Imagen05](/images/Imagen05.jpeg)
 
-Por lo que, tras agregar la función, se tiene:
-
-    xml2tps("prueba.xml", "resultado.tps", fname = "train\\", LM = 12, top = 2000)
-
-![Imagen06](/images/Imagen06.jpeg)
-
 Finalmente, guardamos los cambios en el documento.
+ 
+Y si estamos en un IDLE, podemos ejecutarlo de una vez desde el interprete que se este usando.
 
 <br><br>
 
 ## Ejecución desde la terminal
 
-Una vez añadidos y guardamos los datos, se abre la terminal, para esto se usa el comando `windows + r`, lo cual nos abre una ventana, donde debemos escribir `cmd` y seleccionar `aceptar`.
+Una vez añadidos y guardados los datos, se abre una terminal para ejecutar el programa, para esto debemos de ubicarnos en la carpeta en la que se descargó previamente el programa `xml2tps`.
 
-![Imagen07](/images/Imagen07.jpeg)
+![Imagen06](/images/Imagen06.jpeg)
 
-Aquí, debemos dirigirnos a la carpeta en donde esta guardado el programa que editamos previamente, para ejecutar el siguiente comando:
+Una vez aquí, se debe ejecutar el siguiente comando:
 
     python xml2tps.py
 
-![Imagen08](/images/Imagen08.jpeg)
+![Imagen07](/images/Imagen07.jpeg)
 
 El cual va a ejecutar la función además de realizar la conversión del archivo `xml` que colocamos a un archivo `tps`.
 
 Finalmente, podemos ver como se creó correctamente el archivo `resultado.tps`
 
-![Imagen9](/images/Imagen9.jpeg)
+![Imagen08](/images/Imagen08.jpeg)
