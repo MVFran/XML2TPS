@@ -18,17 +18,17 @@ son modulos estandar de la biblioteca de python, por lo que vienen instaladas po
 
 Para usarlo de forma sencilla, se descarga el archivo [`xml2tps.py`](/Spanish/Python/xml2tps.py) en la misma ruta donde se encuentre el archivo `xml` que se desea transformar.
 
-![Imagen01](/images/Imagen01.jpeg)
+![imagen01](/images/imagen01.jpeg)
 
 Una vez descargado, podemos abrirlo con el block de notas o con algún IDE:
 
-![Imagen02](/images/Imagen02.jpeg)
+![imagen02](/images/imagen02.jpeg)
 
 Vamos a la ultima linea y escribimos la función: 
 
     xml2tps(xmlfile, tpsfile, images, fname = '', LM = 0)
 
-![Imagen03](/images/Imagen03.jpeg)
+![imagen03](/images/imagen03.jpeg)
     
 Ahora, es necesario modificar los argumentos.
 <br><br>
@@ -43,7 +43,7 @@ Ahora, es necesario modificar los argumentos.
 
 `fname = ''` Si sucede que, los datos del archivo _xml_ en donde se encuentran las imagenes contienen el nombre de la carpeta en la que se encuentran, debe de añadirse entre comillas el nombre de la carpeta para que el archivo _tps_ pueda reconocer las imagenes, en nuestro ejemplo podemos ver que se encuentra el nombre _**"train\\"**_ antes de el nombre original de la imagen.
 
-![Imagen04](/images/Imagen04.jpeg)
+![imagen04](/images/imagen04.jpeg)
 
 `LM` Aquí se colocan la cantidad de landmarks que contiene el archivo (contando unicamente un eje), por ejemplo: Solo se coloca la cantidad de landmarks que hay en el eje _X_, en nuestro ejemplo tenemos **12** landmarks. 
 
@@ -51,7 +51,7 @@ Por lo que, tras agregar la función, se tiene:
 
     xml2tps("prueba.xml", "resultado.tps", "imagenes", fname = 'train\\', LM = 12)
 
-![Imagen05](/images/Imagen05.jpeg)
+![imagen05](/images/imagen05.jpeg)
 
 Finalmente, guardamos los cambios en el documento.
  
@@ -63,16 +63,16 @@ Y si estamos en un IDLE, podemos ejecutarlo de una vez desde el interprete que s
 
 Una vez añadidos y guardados los datos, se abre una terminal para ejecutar el programa, para esto debemos de ubicarnos en la carpeta en la que se descargó previamente el programa `xml2tps`.
 
-![Imagen06](/images/Imagen06.jpeg)
+![imagen06](/images/imagen06.jpeg)
 
 Una vez aquí, se debe ejecutar el siguiente comando:
 
     python xml2tps.py
 
-![Imagen07](/images/Imagen07.jpeg)
+![imagen07](/images/imagen07.jpeg)
 
 El cual va a ejecutar la función además de realizar la conversión del archivo `xml` que colocamos a un archivo `tps`.
 
 Finalmente, podemos ver como se creó correctamente el archivo `resultado.tps`
 
-![Imagen08](/images/Imagen08.jpeg)
+![imagen08](/images/imagen08.jpeg)
