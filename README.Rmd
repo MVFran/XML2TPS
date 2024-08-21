@@ -13,42 +13,25 @@ knitr::opts_chunk$set(
 )
 ```
 
-# xml2tps
+<br> <img src="images\xml2tps-logo.png" align="left" width="155">
+<br><br><br><br>
 
-<!-- badges: start -->
-<!-- badges: end -->
+# **xml2tps**
 
-The goal of xml2tps is to ...
+<br>
 
-## Installation
+This is a small, useful program for transforming output files from [Ml-Morph](https://github.com/agporto/ml-morph), converting them from `.xml` to `.tps` format. In other words, it is an xml to tps converter.
 
-You can install the development version of xml2tps like so:
+Ml-Morph is a machine-learning-based software tool that enables the extraction of the shape of individuals of interest using automatically placed coordinates. With these shapes, researchers can conduct subsequent **Geometric Morphometrics** analyses. Although it is a powerful tool with a high degree of accuracy, researchers may sometimes want to adjust the position of specific landmarks, add curves to capture additional variation, or include a scale for each individual to explore the effects of allometry in their dataset.
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
+This small application is cross-platform as it is developed in both [**Python**](/Python) and [**R**](/R). Its execution and installation are straightforward; we have included usage instructions and listed the necessary libraries to ensure it runs successfully in either language. <br><br>
 
-## Example
+## **Authors**:  
+Francisco Miranda Vázquez  
+email: <francisco55555mv@ciencias.unam.mx>
 
-This is a basic example which shows you how to solve a common problem:
+Angel Angeles Cortés  
+email: <angel_10@ciencias.unam.mx>
 
-```{r example}
-library(xml2tps)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+Dr. Jesús Alberto Díaz-Cruz  
+email: <vertebrata.j@ciencias.unam.mx>

@@ -1,50 +1,42 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# xml2tps
+<br> <img src="images\xml2tps-logo.png" align="left" width="155">
+<br><br><br><br>
 
-<!-- badges: start -->
-<!-- badges: end -->
+# **xml2tps**
 
-The goal of xml2tps is to …
+<br>
 
-## Installation
+This is a small, useful program for transforming output files from
+[Ml-Morph](https://github.com/agporto/ml-morph), converting them from
+`.xml` to `.tps` format. In other words, it is an xml to tps converter.
 
-You can install the development version of xml2tps like so:
+Ml-Morph is a machine-learning-based software tool that enables the
+extraction of the shape of individuals of interest using automatically
+placed coordinates. With these shapes, researchers can conduct
+subsequent **Geometric Morphometrics** analyses. Although it is a
+powerful tool with a high degree of accuracy, researchers may sometimes
+want to adjust the position of specific landmarks, add curves to capture
+additional variation, or include a scale for each individual to explore
+the effects of allometry in their dataset.
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
+This small application is cross-platform as it is developed in both
+[**Python**](/Python) and [**R**](/R). Its execution and installation
+are straightforward; we have included usage instructions and listed the
+necessary libraries to ensure it runs successfully in either language.
+<br><br>
 
-## Example
+## **Authors**:
 
-This is a basic example which shows you how to solve a common problem:
+Francisco Miranda Vázquez  
+email:
+<a href="mailto:francisco55555mv@ciencias.unam.mx" class="email">francisco55555mv@ciencias.unam.mx</a>
 
-``` r
-library(xml2tps)
-## basic example code
-```
+Angel Angeles Cortés  
+email:
+<a href="mailto:angel_10@ciencias.unam.mx" class="email">angel_10@ciencias.unam.mx</a>
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+Dr. Jesús Alberto Díaz-Cruz  
+email:
+<a href="mailto:vertebrata.j@ciencias.unam.mx" class="email">vertebrata.j@ciencias.unam.mx</a>
