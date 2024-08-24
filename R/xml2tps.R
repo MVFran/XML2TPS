@@ -11,7 +11,11 @@
 #' @export
 #'
 xml2tps <- function(xmlfile, tpsfile, fname = "", LM = 0, image_directory = "") {
-
+  library(magick)
+  library(dplyr)
+  library(XML)
+  library(stringr)
+  library(data.table)
   get_image_heights <- function(directory) {
     image_files <- list.files(directory, full.names = TRUE)
     image_files <- image_files[grepl("\\.(jpg|jpeg|png|gif|bmp)$", image_files, ignore.case = TRUE)]
