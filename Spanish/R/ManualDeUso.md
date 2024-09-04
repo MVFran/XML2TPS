@@ -40,6 +40,7 @@ Puede leer los siguientes formatos de imágenes:
 - BMP
 - TIFF
 - JPEG
+  
 Lee las alturas de las imagenes para corregir las coordenadas y reflejar los puntos de las imágenes en el archivo XML.
 
 ### Procesamiento de Coordenadas
