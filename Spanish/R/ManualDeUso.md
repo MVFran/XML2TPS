@@ -3,6 +3,23 @@
 ## Descripción
 
 La función `xml2tps` convierte datos de un archivo XML a un formato TPS. Esta función es útil para procesar datos de imágenes y coordenadas almacenadas en archivos XML y convertirlas a un formato adecuado para análisis en sistemas que utilicen archivos TPS.
+Este paquete funciona para versiones de Rstudio menores a 4.4.0
+
+## Guía de instalación 
+
+1. Instala "devtools" si no lo tienes ya instalado:
+   ~~~ r
+   install.packages("devtools")
+   ~~~
+2. Importa "devtools" y usa install_github() para instalar el paquete desde GitHub:
+   ~~~
+   library(devtools)
+   install_github("MVFran/XML2TPS")
+   ~~~
+3. Importa el paquete xml2tps:
+   ~~~
+   library(xml2tps)
+   ~~~
 
 ## Parametros
 
@@ -37,6 +54,8 @@ Cada imagen procesada recibe un ID único en el archivo TPS generado. Esto facil
 - Formato de nombres: Si estás utilizando el parámetro fname, asegúrate de que solo contenga la parte de los nombres de archivo que deseas eliminar. Eliminar incorrectamente partes del nombre de archivo puede llevar a errores.
 - Compatibilidad de formatos: Actualmente, la función solo soporta imágenes en los formatos mencionados anteriormente. Si utilizas otros formatos, es necesario convertirlos antes de ejecutar la función.
 ## Ejemplo de uso
+~~~
+library(xml2tps)
 xml2tps("datos.xml", "salida.tps", LM = 5, fname = "image/", img_dir = "imagenes/")
-
+~~~
 
