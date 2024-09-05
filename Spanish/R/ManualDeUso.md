@@ -44,10 +44,10 @@ Puede leer los siguientes formatos de imágenes:
 Lee las alturas de las imagenes para corregir las coordenadas y reflejar los puntos de las imágenes en el archivo XML.
 
 ### Procesamiento de Coordenadas
-La función extrae y corrige las coordenadas de los landmarks de las imágenes, reflejándolas si es necesario, y las escribe en el archivo TPS.
+La función extrae y corrige las coordenadas de los landmarks de las imágenes, y las escribe en el archivo TPS.
 
 ### Identificación de Imágenes
-Cada imagen procesada recibe un ID único en el archivo TPS generado. Esto facilita la referencia cruzada de imágenes con sus datos correspondientes.
+Cada imagen procesada recibe un ID único en el archivo TPS generado. Esto facilita la referencia de imágenes con sus datos correspondientes.
 
 ## Consideraciones
 - "No se encontró la altura en el archivo JPEG/PNG/BMP/TIFF": Este error ocurre si la función no puede encontrar o leer correctamente la altura de una imagen. Verifica que las imágenes estén en un formato válido y que la ruta proporcionada sea correcta.
