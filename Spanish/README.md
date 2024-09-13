@@ -27,10 +27,10 @@ las librerías necesarias para que se ejecute exitosamente en cualquiera
 de los lenguajes. <br> <br> 
 
 ## **Autores**:  
-Francisco Miranda Vázquez  
+[Francisco Miranda Vázquez](https://github.com/MVFran)  
 email: <francisco55555mv@ciencias.unam.mx>
 
-Angel Angeles Cortés  
+[Angel Angeles Cortés](https://github.com/4ngel19)  
 email: <angel_10@ciencias.unam.mx>
 
 [Dr. Jesús Alberto Díaz-Cruz](https://github.com/ChuchoDC)  
