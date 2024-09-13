@@ -29,14 +29,14 @@ necessary libraries to ensure it runs successfully in either language.
 
 ## **Authors**:
 
-Francisco Miranda Vázquez  
+[Francisco Miranda Vázquez](https://github.com/MVFran)  
 email:
 <a href="mailto:francisco55555mv@ciencias.unam.mx" class="email">francisco55555mv@ciencias.unam.mx</a>
 
-Angel Angeles Cortés  
+[Angel Angeles Cortés](https://github.com/4ngel19)  
 email:
 <a href="mailto:angel_10@ciencias.unam.mx" class="email">angel_10@ciencias.unam.mx</a>
 
-Dr. Jesús Alberto Díaz-Cruz  
+[Dr. Jesús Alberto Díaz-Cruz](https://github.com/ChuchoDC)  
 email:
 <a href="mailto:vertebrata.j@ciencias.unam.mx" class="email">vertebrata.j@ciencias.unam.mx</a>
