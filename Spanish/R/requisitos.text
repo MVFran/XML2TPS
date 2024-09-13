@@ -1,5 +1,0 @@
- `magick`       >= 2.7.0 
- `dplyr`        >= 1.0.0 
- `XML`          >= 3.99
- `stringr`      >= 1.4.0 
- `data.table`   >= 1.12.8
