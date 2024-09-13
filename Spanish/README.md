@@ -33,5 +33,5 @@ email: <francisco55555mv@ciencias.unam.mx>
 Angel Angeles Cortés  
 email: <angel_10@ciencias.unam.mx>
 
-Dr. Jesús Alberto Díaz-Cruz
+[Dr. Jesús Alberto Díaz-Cruz](https://github.com/ChuchoDC)  
 email: <vertebrata.j@ciencias.unam.mx> 
