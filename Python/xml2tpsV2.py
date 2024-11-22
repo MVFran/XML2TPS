@@ -42,7 +42,7 @@ def xml2tps(xmlfile, tpsfile, images, fname='', LM=0):
             csvwriter.writerow(row)
     
     archivo = pd.read_csv("output.csv")
-    archivo["id"] = archivo["id"].str.replace(f"{fname}", "")  # Limpiar nombres de ID
+    archivo["id"] = archivo["id"].str.replace(f"{fname}", "")
         
     matrix = archivo.to_numpy()
     nombres = []
